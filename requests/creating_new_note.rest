@@ -1,0 +1,33 @@
+POST http://localhost:3001/api/notes
+Content-Type: application/json
+
+{
+  "content" : "VScode rest client is a pretty handy tool",
+  "important": true
+}
+
+### Post with empty content
+POST http://localhost:3001/api/notes
+Content-Type: application/json
+
+{
+  "content" : "",
+  "important": true
+}
+
+### Post with no important key - default will be false
+POST http://localhost:3001/api/notes
+Content-Type: application/json
+
+{
+  "content" : "VScode rest client is a pretty handy tool"
+}
+
+### Post with weird important key
+POST http://localhost:3001/api/notes
+Content-Type: application/json
+
+{
+  "content" : "VScode rest client is a pretty handy tool",
+  "important": "very important"
+}
